@@ -26,4 +26,13 @@ public class User {
 	
 	@Column(name="EMAIL", nullable= false, length = 500)
 	private String email;
+	
+	@Column(name="BIRTHDATE", nullable= false, length = 100)
+	private String birthDate;
+	
+	@ManyToOne
+	@JoinColumn(name="FK_ADDRESS", nullable= false)
+	private Address idAddress;
+	
+	
 }

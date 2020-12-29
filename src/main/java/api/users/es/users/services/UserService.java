@@ -81,6 +81,8 @@ public class UserService {
 			
 			existUser.setName(user.getName());
 			existUser.setEmail(user.getEmail());
+			existUser.setBirthDate(user.getBirthDate());
+			existUser.setIdAddress(user.getIdAddress());
 			
 			userRepository.save(existUser);
 			

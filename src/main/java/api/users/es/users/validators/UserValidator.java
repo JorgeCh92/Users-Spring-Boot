@@ -25,5 +25,15 @@ public class UserValidator {
 		{
 			throw new ValidateServiceException("Invalid input: El email es muy largo (max 500");
 		}
+		
+		if(user.getBirthDate() == null || user.getBirthDate().trim().isEmpty())
+		{
+			throw new ValidateServiceException("Invalid input: La fecha de nacimiento es obligatoria");
+		}
+		
+		if(user.getIdAddress() == null)
+		{
+			throw new ValidateServiceException("Invalid input: La dirección es obligatoria");
+		}
 	}
 }
